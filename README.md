@@ -13,4 +13,4 @@ Open placeholders (search for `TODO` / `placeholder`):
 
 ## Hosting
 
-`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main`. One-time setup: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
+GitHub Pages publishes the site from the `main` branch (Settings → Pages → Deploy from a branch). Every push to `main` goes live at https://morganecf.github.io/mischief-glory/.
