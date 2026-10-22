@@ -1,18 +1,23 @@
-/* Mischief and Glory, Inc. — shared styles */
+/* Mischief and Glory, Inc. — shared styles
+   Palette after Alan Moore & Steve Moore's Moon and Serpent Bumper Book of Magic:
+   iridescent pastels, gilt borders, aubergine ink, royal purple. */
 
 :root {
-  --paper: #f6f3ec;
-  --ink: #1b1a17;
-  --muted: #6d675c;
-  --rule: #d9d3c5;
-  --accent: #8a1c1c;
-  --accent-ink: #fbf7ef;
-  --card: #efeadf;
+  --paper: #fbf6ec;
+  --ink: #2e1838;
+  --muted: #6e5a78;
+  --rule: #dcc58f;
+  --gold: #b5862a;
+  --gold-deep: #8f6517;
+  --accent: #6a2c8c;
+  --accent-ink: #fbf6ec;
+  --card: rgba(255, 255, 255, 0.55);
+  --iridescent: linear-gradient(160deg, #f1e9fb 0%, #fbecf3 32%, #fdf5e1 64%, #e8f2fb 100%);
   --serif: "Cormorant Garamond", "EB Garamond", Georgia, serif;
   --body: "EB Garamond", Georgia, "Times New Roman", serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --glyph: "Noto Sans Manichaean", var(--serif);
-  --measure: 40rem;
+  --measure: 50rem;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -21,14 +26,14 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--paper) var(--iridescent) fixed;
   color: var(--ink);
   font-family: var(--body);
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.45;
 }
 
-a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a { color: inherit; text-decoration-color: var(--gold); text-underline-offset: 0.16em; text-decoration-thickness: 1px; }
 a:hover { color: var(--accent); }
 
 img { max-width: 100%; display: block; }
@@ -40,13 +45,13 @@ img { max-width: 100%; display: block; }
   top: 0;
   z-index: 10;
   background: var(--paper);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 3px double var(--gold);
 }
 
 .site-nav .inner {
   max-width: 64rem;
   margin: 0 auto;
-  padding: 0.75rem 1.25rem;
+  padding: 0.6rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,9 +62,10 @@ img { max-width: 100%; display: block; }
 .wordmark {
   font-family: var(--mono);
   font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
+  color: var(--accent);
 }
 
 .site-nav ul {
@@ -67,89 +73,100 @@ img { max-width: 100%; display: block; }
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1.25rem;
+  gap: 1.1rem;
   align-items: center;
   font-family: var(--mono);
   font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .site-nav ul a { text-decoration: none; }
-.site-nav ul a[aria-current="page"] { color: var(--accent); border-bottom: 1px solid var(--accent); }
+.site-nav ul a[aria-current="page"] { color: var(--accent); border-bottom: 1px solid var(--gold); }
 
 /* ---------- Layout ---------- */
 
 main {
   max-width: var(--measure);
   margin: 0 auto;
-  padding: 3.5rem 1.25rem 5rem;
+  padding: 2rem 1rem 3.5rem;
 }
 
-main.wide { max-width: 56rem; }
+main.wide { max-width: 64rem; }
 
 h1, h2, h3 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
-h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); letter-spacing: -0.01em; }
-h2 { font-size: 2rem; margin-top: 3.5rem; margin-bottom: 1rem; }
-h3 { font-size: 1.45rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+h1 { font-size: clamp(2.5rem, 6.5vw, 4rem); color: var(--accent); letter-spacing: -0.02em; }
+h2 { font-size: 1.9rem; margin-top: 2.25rem; margin-bottom: 0.6rem; }
+h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.4rem; }
 
-p { margin: 0 0 1.1rem; }
+p { margin: 0 0 0.85rem; }
+ol, ul { margin-top: 0; padding-left: 1.4rem; }
 
 .eyebrow {
   font-family: var(--mono);
   font-size: 0.75rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .lede {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-style: italic;
   color: var(--muted);
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
-.glyph { font-family: var(--glyph); color: var(--accent); }
+.subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--muted);
+  margin: 0.4rem 0 1.25rem;
+}
+
+.glyph { font-family: var(--glyph); color: var(--gold); }
 
 .divider {
   text-align: center;
   font-family: var(--glyph);
-  color: var(--accent);
-  font-size: 1.6rem;
-  margin: 3.5rem 0 1rem;
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin: 2.25rem 0 0.5rem;
   line-height: 1;
 }
 
-hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 2rem 0 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 1rem; }
+.hero { padding: 1rem 0 1rem; border-bottom: 3px double var(--gold); margin-bottom: 0.5rem; }
 .hero .cities {
   font-family: var(--mono);
   font-size: 0.85rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-top: 1.25rem;
+  margin: 0.9rem 0 0;
 }
 
 /* ---------- Quote ---------- */
 
 blockquote {
-  margin: 2.5rem 0;
-  padding: 0 0 0 1.25rem;
-  border-left: 2px solid var(--accent);
+  margin: 1.75rem 0;
+  padding: 0 0 0 1.1rem;
+  border-left: 2px solid var(--gold);
   font-family: var(--serif);
-  font-size: 1.6rem;
-  line-height: 1.35;
+  font-size: 1.5rem;
+  line-height: 1.3;
   font-style: italic;
+  color: var(--accent);
 }
 
 /* ---------- Buttons ---------- */
@@ -158,27 +175,26 @@ blockquote {
   display: inline-block;
   font-family: var(--mono);
   font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.85rem 1.4rem;
-  background: var(--ink);
-  color: var(--paper);
-  border: 1px solid var(--ink);
+  padding: 0.75rem 1.2rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: 1px solid var(--accent);
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
-.button:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.button:hover { background: var(--gold); border-color: var(--gold-deep); color: var(--ink); }
 
-.button.ghost { background: transparent; color: var(--ink); }
-.button.ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-
-.button.small { padding: 0.45rem 0.8rem; font-size: 0.72rem; }
+.button.small { padding: 0.4rem 0.75rem; font-size: 0.72rem; }
 
 .callout {
   background: var(--card);
-  border: 1px solid var(--rule);
-  padding: 1.5rem 1.5rem 0.5rem;
-  margin: 2rem 0;
+  border: 1px solid var(--gold);
+  outline: 1px solid var(--rule);
+  outline-offset: 3px;
+  padding: 1.1rem 1.25rem 0.3rem;
+  margin: 1.75rem 4px;
 }
 .callout h3 { margin-top: 0; }
 
@@ -186,26 +202,24 @@ blockquote {
 
 .people {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 2rem 1.75rem;
-  margin: 1.5rem 0 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.25rem;
+  margin: 1rem 0 1.5rem;
 }
 
-.person p { font-size: 1.05rem; line-height: 1.55; }
-.person h3 { margin-top: 0.9rem; margin-bottom: 0.35rem; font-size: 1.4rem; }
+.person p { font-size: 1rem; line-height: 1.4; }
+.person h3 { margin-top: 0.7rem; margin-bottom: 0.25rem; font-size: 1.35rem; }
 
 .photo {
   aspect-ratio: 4 / 5;
-  background:
-    repeating-linear-gradient(135deg, transparent 0 10px, rgba(0,0,0,0.035) 10px 11px),
-    var(--card);
-  border: 1px solid var(--rule);
+  background: var(--iridescent);
+  border: 1px solid var(--gold);
   display: grid;
   place-items: center;
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.7rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   overflow: hidden;
 }
@@ -216,106 +230,106 @@ blockquote {
 .project {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 0.25rem 1.5rem;
-  padding: 1.75rem 0;
+  gap: 0.2rem 1.25rem;
+  padding: 1.25rem 0;
   border-top: 1px solid var(--rule);
 }
 .project:last-of-type { border-bottom: 1px solid var(--rule); }
-.project h2 { margin: 0; font-size: 1.9rem; }
+.project h2 { margin: 0; font-size: 1.8rem; }
 .project .meta {
   font-family: var(--mono);
   font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-deep);
   white-space: nowrap;
-  padding-top: 0.6rem;
+  padding-top: 0.55rem;
 }
-.project p { grid-column: 1 / -1; margin: 0.5rem 0 0; }
+.project p { grid-column: 1 / -1; margin: 0.35rem 0 0; }
 
 /* ---------- FAQ ---------- */
 
 details {
   border-top: 1px solid var(--rule);
-  padding: 1.1rem 0;
+  padding: 0.85rem 0;
 }
 details:last-of-type { border-bottom: 1px solid var(--rule); }
 summary {
   cursor: pointer;
   font-family: var(--serif);
-  font-size: 1.55rem;
-  line-height: 1.25;
+  font-size: 1.45rem;
+  line-height: 1.2;
   list-style: none;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
 summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; font-family: var(--mono); color: var(--accent); }
+summary::after { content: "+"; font-family: var(--mono); color: var(--gold-deep); }
 details[open] summary::after { content: "−"; }
-details > *:not(summary):first-of-type { margin-top: 1rem; }
+details > *:not(summary):first-of-type { margin-top: 0.75rem; }
 
-.tiers { list-style: none; padding: 0; margin: 0 0 1rem; }
-.tiers > li { padding: 0.9rem 0; border-bottom: 1px dashed var(--rule); }
+.tiers { list-style: none; padding: 0; margin: 0 0 0.75rem; }
+.tiers > li { padding: 0.7rem 0; border-bottom: 1px dashed var(--rule); }
 .tiers > li:last-child { border-bottom: 0; }
 .tier-amount {
   font-family: var(--mono);
   font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--accent);
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 .tiers ul { margin: 0; padding-left: 1.1rem; }
-.tiers ul li { margin-bottom: 0.3rem; }
+.tiers ul li { margin-bottom: 0.2rem; }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1.05rem;
-  margin: 1rem 0 1.5rem;
+  font-size: 1rem;
+  margin: 0.75rem 0 1rem;
 }
-th, td { text-align: left; padding: 0.6rem 0.5rem 0.6rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th, td { text-align: left; padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th {
   font-family: var(--mono);
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--muted);
   font-weight: 400;
 }
-td:first-child { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.06em; }
-tfoot td { border-bottom: 0; font-weight: 600; }
+td:first-child { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.02em; }
 
-.bar { height: 4px; background: var(--rule); margin-top: 0.4rem; }
+.bar { height: 4px; background: var(--rule); margin-top: 0.35rem; }
 .bar span { display: block; height: 100%; background: var(--accent); }
 
 /* ---------- Placeholder notes ---------- */
 
 .placeholder {
-  border: 1px dashed var(--muted);
+  border: 1px dashed var(--gold);
   color: var(--muted);
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1rem;
   font-family: var(--mono);
   font-size: 0.8rem;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 /* ---------- Footer ---------- */
 
 footer {
-  border-top: 1px solid var(--rule);
+  border-top: 3px double var(--gold);
+  background: var(--paper);
   font-family: var(--mono);
   font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--muted);
 }
 footer .inner {
   max-width: 64rem;
   margin: 0 auto;
-  padding: 2rem 1.25rem 3rem;
+  padding: 1.25rem 1rem 2rem;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -323,10 +337,15 @@ footer .inner {
 }
 footer a { text-decoration: none; }
 
-@media (max-width: 34rem) {
-  body { font-size: 1.1rem; }
-  .site-nav ul { gap: 0.9rem; }
+@media (max-width: 44rem) {
+  .people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 30rem) {
+  body { font-size: 1.08rem; }
+  .site-nav ul { gap: 0.8rem; }
+  .people { grid-template-columns: 1fr; }
   .project { grid-template-columns: 1fr; }
   .project .meta { padding-top: 0; }
-  blockquote { font-size: 1.35rem; }
+  blockquote { font-size: 1.3rem; }
 }
