@@ -10,3 +10,7 @@ Open placeholders (search for `TODO` / `placeholder`):
 - Apply Here button on the projects page (needs a form URL)
 - Grimes / Adam Friedland quote on the manifesto page
 - Psychomagic 9 FAQ and Mystical City Universal pages
+
+## Hosting
+
+`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main`. One-time setup: in the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
