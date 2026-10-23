@@ -200,7 +200,24 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 1rem 0 1rem; border-bottom: 3px double var(--gold); margin-bottom: 0.5rem; }
+.hero {
+  padding: 0.5rem 0 1.25rem;
+  border-bottom: 3px double var(--gold);
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero-emblem { width: 9.5rem; height: auto; }
+.hero .city { white-space: nowrap; }
+
+@media (max-width: 34rem) {
+  .hero { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 0.75rem; }
+  .hero-emblem { order: -1; width: 6.5rem; }
+  .hero .cities { margin-left: auto; margin-right: auto; font-size: 0.95rem; letter-spacing: 0.01em; white-space: nowrap; }
+  .hero .cities .glyph { margin: 0 0.1em; }
+}
 .hero .cities {
   font-family: var(--display);
   font-weight: 900;
