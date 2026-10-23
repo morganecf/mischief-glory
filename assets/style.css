@@ -540,7 +540,7 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
   .people { grid-template-columns: 1fr; gap: 1.25rem; }
   /* small portrait beside the bio instead of a full-width photo */
   .person { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); column-gap: 0.9rem; align-items: start; }
-  .person .photo { grid-row: span 2; }
+  .person .photo { grid-row: span 2; margin-top: 0.25rem; } /* line up with the cap height of the name */
   .person h3 { margin-top: 0; }
   .project { grid-template-columns: 1fr; }
   .project .meta { justify-self: start; margin-top: 0.2rem; }
