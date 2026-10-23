@@ -333,11 +333,11 @@ details > *:not(summary):first-of-type { margin-top: 0.75rem; }
 .tiers > li { padding: 0.7rem 0; border-bottom: 1px dashed var(--rule); }
 .tiers > li:last-child { border-bottom: 0; }
 .tier-amount {
-  font-family: var(--display);
-  font-weight: 900;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
   color: var(--accent);
   display: block;
   margin-bottom: 0.25rem;
@@ -353,14 +353,14 @@ table {
 }
 th, td { text-align: left; padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th {
-  font-family: var(--display);
-  font-weight: 900;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
   color: var(--muted);
 }
-td:first-child { font-family: var(--display); font-weight: 900; font-size: 0.82rem; letter-spacing: 0.02em; }
+td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size: 1.15rem; letter-spacing: 0.04em; }
 
 .bar { height: 4px; background: var(--rule); margin-top: 0.35rem; }
 .bar span { display: block; height: 100%; background: var(--accent); }
