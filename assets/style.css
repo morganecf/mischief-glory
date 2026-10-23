@@ -512,6 +512,12 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
 .bar { height: 4px; background: var(--rule); margin-top: 0.35rem; }
 .bar span { display: block; height: 100%; background: var(--accent); }
 
+/* ---------- Figures ---------- */
+
+.figure { margin: 1.75rem 0; }
+.figure img { width: 100%; height: auto; border: 1px solid var(--gold); }
+.figure figcaption { margin-top: 0.4rem; font-size: 0.9rem; font-style: italic; color: var(--muted); text-align: center; }
+
 /* ---------- Placeholder notes ---------- */
 
 .placeholder {

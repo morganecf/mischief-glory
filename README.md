@@ -8,7 +8,6 @@ To add a photo, replace a `<div class="photo">Photo</div>` with `<div class="pho
 
 Open placeholders (search for `TODO` / `placeholder`):
 - Apply Here button on the projects page (needs a form URL)
-- Grimes / Adam Friedland quote on the manifesto page
 
 ## Hosting
 
