@@ -161,6 +161,16 @@ ol, ul { margin-top: 0; padding-left: 1.4rem; }
 }
 
 .glyph { font-family: var(--glyph); color: var(--gold); }
+/* keep the separator plain: no gilt gradient or outline from the cities line */
+.hero .cities .glyph {
+  -webkit-text-stroke: 0;
+  color: var(--gold-deep);
+  font-weight: 400;
+  font-size: 1.35em;
+  line-height: 1;
+  vertical-align: -0.12em;
+  margin: 0 0.25em;
+}
 
 .divider {
   text-align: center;
