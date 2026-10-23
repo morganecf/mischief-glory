@@ -269,6 +269,17 @@ details.section > summary { font-size: 2.2rem; }
 .want .show { margin: 0.2rem 0; font-size: 1rem; line-height: 1.35; }
 .want .show em { font-size: 1.1rem; font-weight: 600; }
 .want .stars { color: var(--gold); letter-spacing: 0.05em; }
+.want-head {
+  padding: 0 1rem;
+  background: none;
+  border: 0;
+  font-family: var(--body);
+  font-weight: 600;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
 .want .takeaway { margin: 0; font-style: italic; color: var(--accent); }
 
 .personas { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -443,6 +454,7 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
 @media (max-width: 30rem) {
   body { font-size: 1.08rem; }
   .want { grid-template-columns: 1fr; }
+  .want-head { display: none; }
   .site-nav ul { gap: 0.8rem; }
   .people { grid-template-columns: 1fr; }
   .project { grid-template-columns: 1fr; }
