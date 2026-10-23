@@ -251,6 +251,34 @@ details.section > summary { font-size: 2.2rem; }
 .budget ul ul { margin: 0.2rem 0 0.4rem; }
 .budget li { margin-bottom: 0.15rem; }
 
+.credits { list-style: none; padding: 0; }
+.credits li { margin-bottom: 0.5rem; }
+.credits strong { color: var(--accent); }
+
+/* "People want this": comparable shows and what each tells us */
+.wants { display: grid; gap: 0.75rem; margin: 0.5rem 0 1.25rem; }
+.want {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.5rem 1.5rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+}
+.want .show { margin: 0.2rem 0; font-size: 1rem; line-height: 1.35; }
+.want .show em { font-size: 1.1rem; font-weight: 600; }
+.want .stars { color: var(--gold); letter-spacing: 0.05em; }
+.want .takeaway { margin: 0; font-style: italic; color: var(--accent); }
+
+.personas { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.personas li {
+  border: 1px solid var(--gold);
+  background: var(--card);
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+}
+
 /* large boxed call-to-action link */
 .callout.feature { padding: 1.75rem 1.5rem; }
 .callout.feature a {
@@ -414,6 +442,7 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
 
 @media (max-width: 30rem) {
   body { font-size: 1.08rem; }
+  .want { grid-template-columns: 1fr; }
   .site-nav ul { gap: 0.8rem; }
   .people { grid-template-columns: 1fr; }
   .project { grid-template-columns: 1fr; }
