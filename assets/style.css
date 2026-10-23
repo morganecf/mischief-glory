@@ -23,7 +23,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  /* stop the rubber-band bounce at the page edges, which drags the sticky nav down */
+  overscroll-behavior-y: none;
+  background: var(--paper);
+}
 
 body {
   margin: 0;
