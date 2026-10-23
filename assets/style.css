@@ -227,14 +227,24 @@ blockquote {
   margin: 1.75rem 4px;
 }
 .callout h3 { margin-top: 0; }
-.callout.centered { text-align: center; }
+.callout.centered, .centered { text-align: center; }
+
+h3.insight {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 1.45rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 1.75rem;
+}
 
 /* ---------- People ---------- */
 
 .people-heading {
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+  font-size: clamp(1.3rem, 3.6vw, 1.75rem);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
@@ -285,7 +295,7 @@ blockquote {
   font-size: 0.78rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: var(--accent);
   white-space: nowrap;
   align-self: start;
