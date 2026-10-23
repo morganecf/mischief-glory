@@ -99,12 +99,8 @@ body::after {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   color: var(--accent);
 }
-.wordmark img { height: 1.9rem; width: auto; }
 
 .site-nav ul {
   list-style: none;
