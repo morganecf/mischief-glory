@@ -27,6 +27,9 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--body);
@@ -52,6 +55,7 @@ body::before, body::after {
   width: max(0px, calc((100vw - var(--content)) / 2 - 1.5rem));
   background: url("frame.svg") center top / auto 300px space repeat, var(--iridescent);
   pointer-events: none;
+  z-index: 2;
 }
 body::before { left: 0; border-right: 3px double var(--gold); }
 body::after { right: 0; border-left: 3px double var(--gold); }
@@ -114,6 +118,8 @@ body::after { right: 0; border-left: 3px double var(--gold); }
 /* ---------- Layout ---------- */
 
 main {
+  flex: 1 0 auto;
+  width: 100%;
   max-width: var(--measure);
   margin: 0 auto;
   padding: 2rem 1rem 3.5rem;
@@ -377,29 +383,17 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
   margin: 1.5rem 0;
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Bottom frame ---------- */
 
-footer {
+/* Closes the frame: the side columns run into this band at the foot of every page */
+.frame-bottom {
   position: relative;
+  z-index: 1;
+  height: 200px;
+  margin-top: 2rem;
   border-top: 3px double var(--gold);
-  background: var(--paper);
-  font-family: var(--display);
-  font-weight: 900;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--muted);
+  background: url("frame-h.svg") center center / 300px 200px repeat-x, var(--iridescent);
 }
-footer .inner {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 1.25rem 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-footer a { text-decoration: none; }
 
 @media (max-width: 44rem) {
   .people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -412,4 +406,5 @@ footer a { text-decoration: none; }
   .project { grid-template-columns: 1fr; }
   .project .meta { justify-self: start; margin-top: 0.2rem; }
   blockquote { font-size: 1.3rem; }
+  .frame-bottom { height: 120px; background-size: 180px 120px, auto; }
 }
