@@ -183,11 +183,12 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin: 0.9rem 0 0;
-  /* pink-to-violet fume, after the wizard's cape on the Bumper Book cover */
-  background: linear-gradient(90deg, #d9558f 0%, #b552b3 35%, #8a4fc6 65%, #5a4fbf 100%);
+  /* gilt lettering with a burnt-orange outline, after the Bumper Book cover title */
+  background: linear-gradient(180deg, #f8e391 0%, #e7b844 45%, #c08a22 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-stroke: 1.2px #7a3a0e;
   width: fit-content;
 }
 
