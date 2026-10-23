@@ -18,7 +18,6 @@
   --display: "Elsie", var(--serif);
   --glyph: "Noto Sans Manichaean", var(--serif);
   --measure: 50rem;
-  --content: var(--measure);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -35,7 +34,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--paper);
   color: var(--ink);
   font-family: var(--body);
   font-size: 1.15rem;
@@ -47,24 +45,17 @@ a:hover { color: var(--accent); }
 
 img { max-width: 100%; display: block; }
 
-/* ---------- Side frames ---------- */
+/* ---------- Background ---------- */
 
-/* Serpent-and-moon columns down the left and right of every page */
-body::before, body::after {
+/* Celestial caduceus artwork behind the cream content panel. A fixed layer
+   (rather than background-attachment: fixed) so it also holds still on iOS. */
+body::before {
   content: "";
   position: fixed;
-  top: 0;
-  bottom: 0;
-  width: max(0px, calc((100vw - var(--content)) / 2 - 1.5rem));
-  background: url("frame.svg") center top / auto 300px space repeat, var(--iridescent);
+  inset: 0;
+  z-index: -1;
+  background: var(--paper) url("background.webp") center / cover no-repeat;
   pointer-events: none;
-  z-index: 2;
-}
-body::before { left: 0; border-right: 3px double var(--gold); }
-body::after { right: 0; border-left: 3px double var(--gold); }
-
-@media (max-width: 58rem) {
-  body::before, body::after { display: none; }
 }
 
 /* ---------- Nav ---------- */
@@ -120,9 +111,16 @@ body::after { right: 0; border-left: 3px double var(--gold); }
 main {
   flex: 1 0 auto;
   width: 100%;
-  max-width: var(--measure);
+  max-width: calc(var(--measure) + 3rem);
   margin: 0 auto;
-  padding: 2rem 1rem 3.5rem;
+  padding: 2rem 2.5rem 3.5rem;
+  background: var(--paper);
+  border-left: 3px double var(--gold);
+  border-right: 3px double var(--gold);
+}
+
+@media (max-width: 54rem) {
+  main { border-left: 0; border-right: 0; padding-left: 1rem; padding-right: 1rem; }
 }
 
 
