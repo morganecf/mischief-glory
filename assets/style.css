@@ -182,8 +182,13 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
   font-size: clamp(1.15rem, 3.2vw, 1.6rem);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent);
   margin: 0.9rem 0 0;
+  /* pink-to-violet fume, after the wizard's cape on the Bumper Book cover */
+  background: linear-gradient(90deg, #d9558f 0%, #b552b3 35%, #8a4fc6 65%, #5a4fbf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
 }
 
 /* ---------- Quote ---------- */
