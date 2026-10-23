@@ -338,6 +338,38 @@ details.section > summary { font-size: 2.2rem; }
   font-size: 1rem;
 }
 
+/* comic-book splash panel */
+.callout.splash {
+  position: relative;
+  margin: 2.25rem 0.5rem 2.5rem;
+  padding: 1.6rem 1.75rem 0.9rem;
+  border: 3px solid var(--ink);
+  outline: 0;
+  box-shadow: 7px 7px 0 var(--accent);
+  transform: rotate(-0.8deg);
+  background:
+    radial-gradient(circle, rgba(231, 184, 68, 0.38) 1.3px, transparent 1.6px) 0 0 / 9px 9px,
+    #fff6dc;
+}
+.callout.splash p:first-child {
+  font-family: "Bangers", var(--display);
+  font-size: clamp(1.35rem, 3.4vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-shadow: 2px 2px 0 rgba(231, 184, 68, 0.9);
+}
+.callout.splash .button {
+  font-family: "Bangers", var(--display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  transform: rotate(1.5deg);
+}
+.callout.splash .button:hover { transform: rotate(1.5deg) translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
+
 /* large boxed call-to-action link */
 .callout.feature { padding: 1.75rem 1.5rem; }
 .callout.feature a {
