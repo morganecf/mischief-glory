@@ -54,7 +54,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: var(--paper) url("background.webp") center / cover no-repeat;
+  background: var(--paper) url("background.webp?v=2") center / cover no-repeat;
   pointer-events: none;
 }
 
