@@ -243,6 +243,11 @@ details.section:last-of-type { border-bottom: 3px double var(--gold); }
 details.section > summary { font-size: 2.2rem; }
 .bios p { font-size: 1.05rem; line-height: 1.45; }
 .bios strong { color: var(--accent); }
+.budget h3 { margin-top: 1.25rem; color: var(--accent); }
+.budget h3:first-child { margin-top: 0.5rem; }
+.budget ul { margin-bottom: 0.85rem; }
+.budget ul ul { margin: 0.2rem 0 0.4rem; }
+.budget li { margin-bottom: 0.15rem; }
 
 /* large boxed call-to-action link */
 .callout.feature { padding: 1.75rem 1.5rem; }
