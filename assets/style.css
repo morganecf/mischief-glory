@@ -377,17 +377,6 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
   margin: 1.5rem 0;
 }
 
-/* ---------- Bottom frame ---------- */
-
-/* Closes the frame: the side columns run into this band at the foot of every page */
-.frame-bottom {
-  position: relative;
-  z-index: 1;
-  height: 200px;
-  margin-top: 2rem;
-  border-top: 3px double var(--gold);
-  background: url("frame-h.svg") center center / 300px 200px repeat-x, var(--iridescent);
-}
 
 @media (max-width: 44rem) {
   .people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -400,5 +389,4 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
   .project { grid-template-columns: 1fr; }
   .project .meta { justify-self: start; margin-top: 0.2rem; }
   blockquote { font-size: 1.3rem; }
-  .frame-bottom { height: 120px; background-size: 180px 120px, auto; }
 }
