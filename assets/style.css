@@ -161,9 +161,7 @@ ol, ul { margin-top: 0; padding-left: 1.4rem; }
 }
 
 .glyph { font-family: var(--glyph); color: var(--gold); }
-/* keep the separator plain: no gilt gradient or outline from the cities line */
 .hero .cities .glyph {
-  -webkit-text-stroke: 0;
   color: var(--gold-deep);
   font-weight: 400;
   font-size: 1.35em;
@@ -193,13 +191,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin: 0.9rem 0 0;
-  /* gilt lettering with a burnt-orange outline, after the Bumper Book cover title */
-  background: linear-gradient(180deg, #f8e391 0%, #e7b844 45%, #c08a22 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 1.2px #7a3a0e;
-  width: fit-content;
+  color: var(--ink);
 }
 
 /* ---------- Quote ---------- */
