@@ -338,26 +338,27 @@ details.section > summary { font-size: 2.2rem; }
   font-size: 1rem;
 }
 
-/* art nouveau panel: gilt and midnight frame with star medallions at the corners */
+/* art nouveau panel: fine gilt rules with whiplash scrolls in each corner */
 .callout.splash {
   position: relative;
-  margin: 2.5rem 14px;
-  padding: 1.9rem 2rem 1rem;
-  border: 2px solid var(--gold);
-  outline: 0;
+  margin: 2.5rem 0;
+  --orn: 120px;
+  padding: 3rem 3rem 2rem;
+  border: 1.5px solid var(--gold);
+  outline: 1px solid var(--gold);
+  outline-offset: -7px;
   background: linear-gradient(160deg, #fbf3fb 0%, #fdf1ea 45%, #fdf6e4 100%);
-  box-shadow: 0 0 0 7px #3b2350, 0 0 0 9px var(--gold), 0 10px 26px rgba(46, 24, 56, 0.18);
 }
 .callout.splash::before {
   content: "";
   position: absolute;
-  inset: -22px;
+  inset: -4px;
   pointer-events: none;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Ccircle cx=%2715%27 cy=%2715%27 r=%2713.5%27 fill=%27%233b2350%27 stroke=%27%23e7b844%27 stroke-width=%272%27/%3E%3Cpath d=%27M15 4 L17 13 L26 15 L17 17 L15 26 L13 17 L4 15 L13 13 Z%27 fill=%27%23e7b844%27/%3E%3C/svg%3E") left top / 34px no-repeat,
-    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Ccircle cx=%2715%27 cy=%2715%27 r=%2713.5%27 fill=%27%233b2350%27 stroke=%27%23e7b844%27 stroke-width=%272%27/%3E%3Cpath d=%27M15 4 L17 13 L26 15 L17 17 L15 26 L13 17 L4 15 L13 13 Z%27 fill=%27%23e7b844%27/%3E%3C/svg%3E") right top / 34px no-repeat,
-    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Ccircle cx=%2715%27 cy=%2715%27 r=%2713.5%27 fill=%27%233b2350%27 stroke=%27%23e7b844%27 stroke-width=%272%27/%3E%3Cpath d=%27M15 4 L17 13 L26 15 L17 17 L15 26 L13 17 L4 15 L13 13 Z%27 fill=%27%23e7b844%27/%3E%3C/svg%3E") left bottom / 34px no-repeat,
-    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Ccircle cx=%2715%27 cy=%2715%27 r=%2713.5%27 fill=%27%233b2350%27 stroke=%27%23e7b844%27 stroke-width=%272%27/%3E%3Cpath d=%27M15 4 L17 13 L26 15 L17 17 L15 26 L13 17 L4 15 L13 13 Z%27 fill=%27%23e7b844%27/%3E%3C/svg%3E") right bottom / 34px no-repeat;
+    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Cg transform=%27rotate%280 40 40%29%27 fill=%27none%27 stroke=%27%23b5862a%27 stroke-linecap=%27round%27%3E%0A%3Cpath d=%27M6 6 C6 22 13 31 25 31 C34 31 36 21 29 18 C23 16 20 22 24 25%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M6 6 C22 6 31 13 31 25 C31 34 21 36 18 29 C16 23 22 20 25 24%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M10 10 C17 10 21 14 21 21 C14 21 10 17 10 10 Z%27 fill=%27%23a98bd6%27 stroke=%27%233b2350%27 stroke-width=%270.8%27/%3E%0A%3Ccircle cx=%2735%27 cy=%2735%27 r=%271.6%27 fill=%27%23b5862a%27 stroke=%27none%27/%3E%0A%3C/g%3E%3C/svg%3E") left top / var(--orn) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Cg transform=%27rotate%2890 40 40%29%27 fill=%27none%27 stroke=%27%23b5862a%27 stroke-linecap=%27round%27%3E%0A%3Cpath d=%27M6 6 C6 22 13 31 25 31 C34 31 36 21 29 18 C23 16 20 22 24 25%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M6 6 C22 6 31 13 31 25 C31 34 21 36 18 29 C16 23 22 20 25 24%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M10 10 C17 10 21 14 21 21 C14 21 10 17 10 10 Z%27 fill=%27%23a98bd6%27 stroke=%27%233b2350%27 stroke-width=%270.8%27/%3E%0A%3Ccircle cx=%2735%27 cy=%2735%27 r=%271.6%27 fill=%27%23b5862a%27 stroke=%27none%27/%3E%0A%3C/g%3E%3C/svg%3E") right top / var(--orn) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Cg transform=%27rotate%28180 40 40%29%27 fill=%27none%27 stroke=%27%23b5862a%27 stroke-linecap=%27round%27%3E%0A%3Cpath d=%27M6 6 C6 22 13 31 25 31 C34 31 36 21 29 18 C23 16 20 22 24 25%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M6 6 C22 6 31 13 31 25 C31 34 21 36 18 29 C16 23 22 20 25 24%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M10 10 C17 10 21 14 21 21 C14 21 10 17 10 10 Z%27 fill=%27%23a98bd6%27 stroke=%27%233b2350%27 stroke-width=%270.8%27/%3E%0A%3Ccircle cx=%2735%27 cy=%2735%27 r=%271.6%27 fill=%27%23b5862a%27 stroke=%27none%27/%3E%0A%3C/g%3E%3C/svg%3E") right bottom / var(--orn) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 80 80%27%3E%3Cg transform=%27rotate%28270 40 40%29%27 fill=%27none%27 stroke=%27%23b5862a%27 stroke-linecap=%27round%27%3E%0A%3Cpath d=%27M6 6 C6 22 13 31 25 31 C34 31 36 21 29 18 C23 16 20 22 24 25%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M6 6 C22 6 31 13 31 25 C31 34 21 36 18 29 C16 23 22 20 25 24%27 stroke-width=%271.1%27/%3E%0A%3Cpath d=%27M10 10 C17 10 21 14 21 21 C14 21 10 17 10 10 Z%27 fill=%27%23a98bd6%27 stroke=%27%233b2350%27 stroke-width=%270.8%27/%3E%0A%3Ccircle cx=%2735%27 cy=%2735%27 r=%271.6%27 fill=%27%23b5862a%27 stroke=%27none%27/%3E%0A%3C/g%3E%3C/svg%3E") left bottom / var(--orn) no-repeat;
 }
 .callout.splash p:first-child {
   font-family: var(--display);
@@ -544,4 +545,5 @@ td:first-child { font-weight: 600; font-variant-caps: all-small-caps; font-size:
   .project { grid-template-columns: 1fr; }
   .project .meta { justify-self: start; margin-top: 0.2rem; }
   blockquote { font-size: 1.3rem; }
+  .callout.splash { --orn: 96px; padding: 2.75rem 1.6rem 1.9rem; }
 }
